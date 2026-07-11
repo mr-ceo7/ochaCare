@@ -8,7 +8,7 @@ import HowItWorksSection from '@/app/components/HowItWorksSection';
 import WhyUsSection from '@/app/components/WhyUsSection';
 import CTASection from '@/app/components/CTASection';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ochacare-kenya.onrender.com';
 
 export const metadata: Metadata = {
   title: "OchaCare Kenya — Trusted Care When You Can't Be There",

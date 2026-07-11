@@ -15,11 +15,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ochacare-kenya.onrender.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "OchaCare Kenya — Trusted Care When You't Be There",
+  title: "OchaCare Kenya — Trusted Care When You Can't Be There",
   description:
     'OchaCare Kenya provides trusted, non-medical care support for your loved ones — escorting patients, hospital navigation, and family liaison services across Kenya.',
   icons: {
