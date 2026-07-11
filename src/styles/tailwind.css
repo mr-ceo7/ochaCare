@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fafafb;
+    --foreground: #111827;
+    --card: #ffffff;
+    --card-foreground: #111827;
+    --primary: #0d6e6e;
+    --primary-foreground: #ffffff;
+    --secondary: #eefcfb;
+    --secondary-foreground: #0d6e6e;
+    --accent: #16a34a;
+    --accent-foreground: #ffffff;
+    --muted: #f3f4f6;
+    --muted-foreground: #4b5563;
+    --border: #e5e7eb;
+    --input: #e5e7eb;
+    --ring: #0d6e6e;
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: #111827;
+    --foreground: #f9fafb;
+    --card: #1f2937;
+    --card-foreground: #f9fafb;
+    --primary: #0e8585;
+    --primary-foreground: #ffffff;
+    --secondary: #111e1f;
+    --secondary-foreground: #38bdf8;
+    --accent: #22c55e;
+    --accent-foreground: #ffffff;
+    --muted: #374151;
+    --muted-foreground: #9ca3af;
+    --border: #374151;
+    --input: #374151;
+    --ring: #0e8585;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-plus-jakarta-sans), sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+  }
+
+  .glass-hero {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 50px rgba(13, 110, 110, 0.05);
+  }
+
+  .blob-teal {
+    background: radial-gradient(
+      circle,
+      rgba(13, 110, 110, 0.15) 0%,
+      rgba(13, 110, 110, 0) 70%
+    );
+    filter: blur(40px);
+    border-radius: 50%;
+  }
+
+  .blob-green {
+    background: radial-gradient(
+      circle,
+      rgba(22, 163, 74, 0.12) 0%,
+      rgba(22, 163, 74, 0) 70%
+    );
+    filter: blur(40px);
+    border-radius: 50%;
+  }
+
+  .arch-img {
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .arch-img:hover {
+    transform: scale(1.05) translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+  }
+
+  .whatsapp-btn {
+    background-color: #25d366;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  }
+  .whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+  .whatsapp-btn:active {
+    transform: translateY(0);
+  }
+
+  .text-display {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.025em;
+  }
+
+  @screen sm {
+    .text-display {
+      font-size: 3rem;
+      line-height: 3.25rem;
+    }
+  }
+
+  @screen md {
+    .text-display {
+      font-size: 3.5rem;
+      line-height: 3.75rem;
+    }
+  }
+
+  .text-hero-xl {
+    font-size: 2.75rem;
+    line-height: 3rem;
+    letter-spacing: -0.03em;
+  }
+
+  @screen sm {
+    .text-hero-xl {
+      font-size: 4rem;
+      line-height: 4.25rem;
+    }
+  }
+
+  @screen md {
+    .text-hero-xl {
+      font-size: 5rem;
+      line-height: 5.25rem;
+    }
+  }
+
+  .service-card {
+    border-radius: 2.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .service-card:hover {
+    box-shadow: 0 20px 40px rgba(13, 110, 110, 0.05);
+    transform: translateY(-4px);
+  }
+}
